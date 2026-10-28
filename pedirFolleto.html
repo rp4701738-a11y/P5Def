@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folleto</title>
+    <link rel="stylesheet" href="style/barraNav.css">
+    <link rel="stylesheet" href="style/titulos.css">
+    <link rel="stylesheet" href="style/pedirFolleto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h3>URL: https://buscasa.gt.tc/pedirFolleto.html</h3>
+
+    <nav>
+        <ul>
+            <li><a href="index2.html" id="rgr"><span>Menú principal</span></a></li>
+            <li><a href="busqueda.html" id="rgr"><span><i class="fa-solid fa-magnifying-glass"></i> Búsqueda</span></a></li>
+            <li><a href="partePrivada.html" id="rgr"><span>Perfil</span></a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><span for="osc" id="lol">Modo oscuro:<input type="checkbox" id="osc"></span></li>
+            <li><span for="letr" id="lol">Letra grande:<input type="checkbox" id="letr"></span></li>
+            <li><span for="cont" id="lol">Contraste:<input type="checkbox" id="cont"></span></li>
+            <li><span for="cont" id="lol">Ambos:<input type="checkbox" id="amb"></span></li>
+        </ul>
+    </nav>
+
+    <input type="checkbox" id="print-toggle" style="display: none;">
+    <label for="print-toggle" style="display: block; margin-bottom: 10px; color: black; cursor: pointer; clear: both;">
+        <u>Cambiar vista normal/impresión</u>
+    </label>
+
+    <h2>Diseña tu folleto</h2>
+    <hr size="1px" align="left" color="black">
+
+    <form>
+        <br>
+        <p>Esta página sirve para diseñar un folleto publicitario de tu anuncio, el cual podrás imprimir y colgar por ahí.</p>
+        <label>Tarifas:</label>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Cantidad de fotos</td>
+                <td>4 céntimos por foto</td>
+            </tr>
+            <tr>
+                <td>A color</td>
+                <td>20 céntimos</td>
+            </tr>
+            <tr>
+                <td>En blanco y negro</td>
+                <td>10 céntimos</td>
+            </tr>
+            <tr>
+                <td>Número de páginas</td>
+                <td>20 céntimos por página</td>
+            </tr>
+            <tr>
+                <td>Resolución</td>
+                <td>2 céntimos por cada pulgada</td>
+            </tr>
+        </table>
+
+        <br>
+        <label>Resumen del anuncio: <br><textarea name="textarea1" rows="4" cols="50" max="4000"></textarea></label>
+
+        <br><br><label>Tus datos:</label><br>
+        <label>Nombre y apellido: <input type="text" max="200" required id="na"></label><br>
+        <label>Email: <input type="email" required max="200" id="em"></label><br>
+        <label>Teléfono de contacto: <input type="text" id="tel"></label><br>
+
+        <br>
+        <br>
+        <label>Dirección del anuncio:</label>
+        <br>
+        <label>Calle: <input type="text" required></label><br>
+        <label>Número: <input type="text" required></label><br>
+        <label>Piso: <input type="text" required></label><br>
+        <label>Puerta: <input type="text" required></label><br>
+        <label>Código postal: <input type="text" required></label><br>
+        <label>Localidad: <input type="text" required></label><br>
+        <label>Provincia: <input type="text" required></label><br>
+        <label>País: <input type="text" required></label><br>
+        <br>
+        <br>
+
+        <label>Color de la portada: <input type="color" value="#000000" required id="col"></label>
+        <br><label>Número de copias: <input type="number" value="1" min="1" max="99" required id="nuc"></label>
+        <br><label>Resolución de las fotos: <input type="number" step="150" value="150" min="150" max="900" required id="res">DPI</label>
+
+        <br><label for="anuncio">Anuncio:</label>
+        <input list="anuncios" name="anuncio" id="anuncio" required>
+        <datalist id="anuncios">
+            <option value="Piso en Alicante">
+            <option value="Casa rural de Crevillente">
+            <option value="Apartamento en Elda">
+        </datalist>
+
+        <br><label>¿Cuándo quiere recibir el envió postal?: <input type="date"></label>
+        
+        <br><label>¿Impresión a color o en blanco y negro?:</label>
+        <br><input type="radio" id="blanco-negro" name="color" value="Blanco y negro">
+        <label for="blanco-negro">Blanco y negro</label><br>
+        <input type="radio" id="a-color" name="color" value="A color">
+        <label for="a-color">A color</label><br>
+
+        <br><label>¿Añadir el precio en el anuncio?: <input type="checkbox"></label><br><br>
+        <input type="botton" value="Enviar" onclick="ir()">
+    </form>
+
+    <footer>
+        <br><br>
+        <hr size="1px" align="center" color="black">
+        <p>&copy; 2026. Aviso de copyright: Contenido de uso libre.</p>
+    </footer>
+</body>
+</html>
